@@ -105,7 +105,7 @@ export default function Nav() {
             </nav>
 
             {isOpen && (
-                <div className="fixed inset-0 z-50 flex flex-col bg-baskgreen text-white md:hidden">
+                <div className="fixed inset-0 z-50 flex min-h-[100dvh] flex-col bg-baskgreen text-white md:hidden">
                     <div className="flex items-center justify-between px-6 py-4">
                         <Link href="/" className="inline-flex items-center" onClick={() => setIsOpen(false)}>
                             <Image src={logosmalltext} alt="Bask logo" className="h-20 w-auto pt-4" />

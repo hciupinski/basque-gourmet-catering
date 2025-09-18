@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                 <Image
                                     src={logo}
                                     alt="Bask logo"
-                                    className="h-23 w-32 object-cover md:h-48 md:w-72 md:pl-10 md:-mb-[1px]"
+                                    className="h-23 w-32 object-cover md:h-48 md:w-74 md:pl-10 md:-mb-[1px]"
                                 />
                             </a>
                             <Nav />
