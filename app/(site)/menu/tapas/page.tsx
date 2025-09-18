@@ -1,3 +1,6 @@
+import logosmall from '@/public/logo-small.svg';
+import Image from 'next/image';
+
 const tapas = [
     {
         name: 'KROKIETY SERRANO',
@@ -99,8 +102,8 @@ export default function Page() {
             </div>
 
             <div className="flex justify-center">
-                <img
-                    src="logo-small.svg"
+                <Image
+                    src={logosmall}
                     alt="Bask logo"
                     className="h-24 h-24 md:h-48 object-cover flex"
                 />

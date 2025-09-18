@@ -1,19 +1,6 @@
 export default function Page() {
     return (
         <div>
-            {/* Hero image bar */}
-            <section className="w-full">
-                <div className="max-w-6xl mx-auto px-4 py-6">
-                    <div className="overflow-hidden rounded-md shadow">
-                        <img
-                            src="bg.png"
-                            alt="Pintxos and tapas sets"
-                            className="w-full h-64 md:h-80 object-cover"
-                        />
-                    </div>
-                </div>
-            </section>
-
             {/* O BASKU */}
             <section className="max-w-3xl mx-auto px-6 pb-24">
                 <h2 className="text-center text-2xl md:text-3xl font-semibold tracking-wide text-amber-700">o BASKu</h2>
