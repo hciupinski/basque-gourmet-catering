@@ -1,7 +1,7 @@
-import '../globals.css';
+import '@/src/styles/globals.css';
 import type { Metadata } from 'next';
-import Nav from '@/components/Nav';
-import { poppins } from '../fonts';
+import Nav from '@/src/components/Nav';
+import { poppins } from '@/src/utils/fonts';
 import logo from '@/public/logo.svg';
 import foodbg from '@/public/bg.webp';
 import Image from 'next/image'
@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             <Image
                                 src={logo}
                                 alt="Bask logo"
-                                className="h-64 h-64 md:h-48 object-cover"
+                                className="h-24 w-36 md:h-48 md:w-72 object-cover"
                             />
                         </a>
                     </div>

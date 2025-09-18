@@ -92,9 +92,9 @@ const pintxos = [
 
 export default function Page() {
     return (
-        <main className="max-w-4xl mx-auto px-4 py-8 text-baskgreen-500">
+        <main className="max-w-4xl mx-auto px-4 py-8 text-baskgreen">
             <header className="relative">
-                <h1 className="text-center text-5xl sm:text-6xl font-light tracking-[0.4em] text-baskgreen-200">pintxos</h1>
+                <h1 className="text-center text-5xl sm:text-6xl font-light tracking-[0.4em] text-baskgreen-light">pintxos</h1>
             </header>
 
             <ul className="mt-8 space-y-2">
@@ -103,7 +103,7 @@ export default function Page() {
                         <div className="flex items-center gap-2">
                         </div>
                     </div>
-                    <p className="text-xl font-light tracking-[0.4em] text-baskgreen-200 whitespace-nowrap">
+                    <p className="text-xl font-light tracking-[0.4em] text-baskgreen-light whitespace-nowrap">
                         5/10 małych porcji
                     </p>
                 </li>
@@ -111,20 +111,20 @@ export default function Page() {
                     <li key={item.name} className="flex items-baseline justify-between">
                         <div className="max-w-xl">
                             <div className="flex items-center gap-2">
-                                <h2 className="text-3xl font-semibold uppercase text-baskgreen-500">{item.name}</h2>
+                                <h2 className="text-3xl font-semibold uppercase text-baskgreen">{item.name}</h2>
                                 {item.note && <span className="text-2xl" aria-label="option">{item.note}</span>}
                             </div>
-                            <p className="text-sm uppercase text-baskbrown-500">
+                            <p className="text-sm uppercase text-baskbrown">
                                 {item.description}
                             </p>
                         </div>
-                        <span className="text-3xl font-semibold text-baskgreen-500 whitespace-nowrap">{item.price}</span>
+                        <span className="text-3xl font-semibold text-baskgreen whitespace-nowrap">{item.price}</span>
                     </li>
                 ))}
             </ul>
 
             <div className="mt-16">
-                <h1 className="text-xl font-light text-baskgreen-200">🥦 - VEGE</h1>
+                <h1 className="text-xl font-light text-baskgreen-light">🥦 - VEGE</h1>
             </div>
 
             <div className="flex justify-center">

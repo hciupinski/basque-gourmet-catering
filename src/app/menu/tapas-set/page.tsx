@@ -98,9 +98,9 @@ const sets: TapasSet[] = [
 
 export default function Page() {
     return (
-        <main className="max-w-6xl mx-auto px-4 py-16 text-baskgreen-500">
+        <main className="max-w-6xl mx-auto px-4 py-16 text-baskbrown">
             <header className="text-center">
-                <h1 className="text-5xl sm:text-6xl font-light uppercase text-baskgreen-500">
+                <h1 className="text-5xl sm:text-6xl font-light uppercase text-baskgreen-light">
                     bask-sety
                 </h1>
             </header>
@@ -110,28 +110,28 @@ export default function Page() {
                     <article key={set.name} className="space-y-2">
                         <div className="flex items-end justify-between">
                             <div>
-                                <p className="text-xs uppercase text-baskbrown-200">
+                                <p className="text-xs uppercase text-baskbrown-light">
                                     {set.servings}
                                 </p>
                                 <div className="flex items-center gap-2">
-                                    <h2 className="text-3xl font-semibold uppercase text-baskgreen-500">
+                                    <h2 className="text-3xl font-semibold uppercase text-baskgreen">
                                         {set.name}
                                     </h2>
                                     {set.note && <span className="text-2xl" aria-hidden="true">{set.note}</span>}
                                 </div>
                             </div>
-                            <span className="text-3xl font-semibold text-baskbrown-500">{set.price}</span>
+                            <span className="text-3xl font-semibold text-baskgreen">{set.price}</span>
                         </div>
 
                         <ul className="space-y-1">
                             {set.items.map((item) => (
                                 <li key={`${set.name}-${item.name}`} className="flex justify-between">
                                     <span
-                                        className={`text-lg uppercase text-baskgreen-500'}`}
+                                        className={`text-lg uppercase text-baskbrown'}`}
                                     >
                                         {item.name}
                                     </span>
-                                    <span className="text-lg font-medium text-baskbrown-500">{item.qty}</span>
+                                    <span className="text-lg font-medium text-baskgreen">{item.qty}</span>
                                 </li>
                             ))}
                         </ul>
@@ -140,12 +140,12 @@ export default function Page() {
             </section>
 
             <div className="my-8 flex justify-between">
-                <h1 className="flex align-midle text-xl font-light text-baskbrown-500">🥦 - VEGE</h1>
-                <aside className="max-w-124 flex md:col-span-2 xl:col-span-1 border border-dashed border-orange-300 rounded-3xl p-6 text-center">
-                    <p className="text-sm uppercase tracking-[0.3em] text-orange-400">
+                <h1 className="flex align-midle text-xl font-light text-baskbrown">🥦 - VEGE</h1>
+                <aside className="max-w-124 flex md:col-span-2 xl:col-span-1 border border-dashed border-baskbrown-light rounded-3xl p-6 text-center">
+                    <p className="text-sm uppercase tracking-[0.3em] text-baskbrown">
                         Chcesz stworzyć swój własny set?
                     </p>
-                    <p className="mt-3 text-base text-green-900">
+                    <p className="mt-3 text-base text-baskgreen">
                         Wybierz swoje pozycje z menu <span className="font-semibold">pintxos</span> lub menu{' '}
                         <span className="font-semibold">tapas</span> i napisz do nas, a my wycenimy Twój zestaw.
                     </p>

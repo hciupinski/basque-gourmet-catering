@@ -1,11 +1,14 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
+const config = {
     content: [
         './app/**/*.{ts,tsx}',
         './components/**/*.{ts,tsx}',
         './pages/**/*.{ts,tsx}',
         './public/**/*.html'
+    ],
+    safelist: [
+        {
+            pattern: /(bg|text|border)-(baskbrown|baskgreen)-(200|500)/
+        }
     ],
     theme: {
         extend: {
@@ -15,14 +18,6 @@ const config: Config = {
                     100: '#ffedd5',
                     400: '#fb923c',
                     600: '#ea580c'
-                },
-                baskbrown: {
-                    200: '#cda175',
-                    500: '#b87333',
-                },
-                baskgreen: {
-                    200: '#048333',
-                    500: '#02521f',
                 }
             }
         }
