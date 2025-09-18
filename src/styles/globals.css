@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+:root {
+    color-scheme: light;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+@theme {
+    --color-baskgreen-light: #048333;
+    --color-baskgreen: #02521f;
+
+    --color-baskbrown-light: #cda175;
+    --color-baskbrown: #b87333;
+}

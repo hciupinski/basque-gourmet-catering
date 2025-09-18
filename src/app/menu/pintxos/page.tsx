@@ -1,3 +1,6 @@
+import logosmall from '@/public/logo-small.svg';
+import Image from 'next/image';
+
 const pintxos = [
     {
         name: 'JAMON',
@@ -70,7 +73,7 @@ const pintxos = [
     },
     {
         name: 'TATARAK',
-        description: 'SIEKANY TATR WOŁOWY/FRYTOWANE KAPARY/AIOLI',
+        description: 'SIEKANY TATAR WOŁOWY/FRYTOWANE KAPARY/AIOLI',
         price: '79/149',
     },
     {
@@ -89,9 +92,9 @@ const pintxos = [
 
 export default function Page() {
     return (
-        <main className="max-w-4xl mx-auto px-4 py-8 text-green-800">
+        <main className="max-w-4xl mx-auto px-4 py-8 text-baskgreen">
             <header className="relative">
-                <h1 className="text-center text-5xl sm:text-6xl font-light tracking-[0.4em] text-green-700">pintxos</h1>
+                <h1 className="text-center text-5xl sm:text-6xl font-light tracking-[0.4em] text-baskgreen-light">pintxos</h1>
             </header>
 
             <ul className="mt-8 space-y-2">
@@ -100,7 +103,7 @@ export default function Page() {
                         <div className="flex items-center gap-2">
                         </div>
                     </div>
-                    <p className="text-xl font-light tracking-[0.4em] text-green-700 whitespace-nowrap">
+                    <p className="text-sm md:text-xl font-light tracking-[0.4em] text-baskgreen-light whitespace-nowrap">
                         5/10 małych porcji
                     </p>
                 </li>
@@ -108,27 +111,27 @@ export default function Page() {
                     <li key={item.name} className="flex items-baseline justify-between">
                         <div className="max-w-xl">
                             <div className="flex items-center gap-2">
-                                <h2 className="text-3xl font-semibold uppercase text-green-900">{item.name}</h2>
-                                {item.note && <span className="text-2xl" aria-label="option">{item.note}</span>}
+                                <h2 className="text-xl md:text-3xl font-semibold uppercase text-baskgreen">{item.name}</h2>
+                                {item.note && <span className="text-lg md:text-2xl" aria-label="option">{item.note}</span>}
                             </div>
-                            <p className="text-sm uppercase text-orange-400">
+                            <p className="text-sm uppercase text-baskbrown">
                                 {item.description}
                             </p>
                         </div>
-                        <span className="text-3xl font-semibold text-green-900 whitespace-nowrap">{item.price}</span>
+                        <span className="text-xl md:text-3xl font-semibold text-baskgreen whitespace-nowrap">{item.price}</span>
                     </li>
                 ))}
             </ul>
 
             <div className="mt-16">
-                <h1 className="text-xl font-light text-green-700">🥦 - VEGE</h1>
+                <h1 className="text-xl font-light text-baskgreen-light">🥦 - VEGE</h1>
             </div>
 
             <div className="flex justify-center">
-                <img
-                    src="logo-small.svg"
+                <Image
+                    src={logosmall}
                     alt="Bask logo"
-                    className="h-24 h-24 md:h-48 object-cover flex"
+                    className="h-40 w-24 md:h-48 object-cover flex"
                 />
             </div>
         </main>

@@ -1,7 +1,9 @@
+import logosmall from '@/public/logo-small.svg';
+import Image from 'next/image';
+
 type SetItem = {
     name: string;
     qty: string;
-    highlight?: boolean;
 };
 
 type TapasSet = {
@@ -96,40 +98,40 @@ const sets: TapasSet[] = [
 
 export default function Page() {
     return (
-        <main className="max-w-6xl mx-auto px-4 py-16 text-green-800">
+        <main className="max-w-6xl mx-auto px-4 py-8 md:py-16 text-baskbrown">
             <header className="text-center">
-                <h1 className="text-5xl sm:text-6xl font-light uppercase text-green-700">
+                <h1 className="text-5xl sm:text-6xl font-light text-baskgreen-light">
                     bask-sety
                 </h1>
             </header>
 
-            <section className="mt-16 grid gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <section className="mt-8 md:mt-16 grid gap-12 md:grid-cols-2 xl:grid-cols-3">
                 {sets.map((set) => (
                     <article key={set.name} className="space-y-2">
                         <div className="flex items-end justify-between">
                             <div>
-                                <p className="text-xs uppercase text-orange-300">
+                                <p className="text-xs uppercase text-baskbrown-light">
                                     {set.servings}
                                 </p>
                                 <div className="flex items-center gap-2">
-                                    <h2 className="text-3xl font-semibold uppercase text-green-900">
+                                    <h2 className="text-3xl font-semibold uppercase text-baskgreen">
                                         {set.name}
                                     </h2>
                                     {set.note && <span className="text-2xl" aria-hidden="true">{set.note}</span>}
                                 </div>
                             </div>
-                            <span className="text-3xl font-semibold text-orange-500">{set.price}</span>
+                            <span className="text-3xl font-semibold text-baskgreen">{set.price}</span>
                         </div>
 
                         <ul className="space-y-1">
                             {set.items.map((item) => (
                                 <li key={`${set.name}-${item.name}`} className="flex justify-between">
                                     <span
-                                        className={`text-lg uppercase ${item.highlight ? 'text-green-700 underline decoration-2 underline-offset-4' : 'text-green-900'}`}
+                                        className={`text-lg uppercase text-baskbrown'}`}
                                     >
                                         {item.name}
                                     </span>
-                                    <span className="text-lg font-medium text-orange-400">{item.qty}</span>
+                                    <span className="text-lg font-medium text-baskgreen">{item.qty}</span>
                                 </li>
                             ))}
                         </ul>
@@ -137,13 +139,13 @@ export default function Page() {
                 ))}
             </section>
 
-            <div className="my-8 flex justify-between">
-                <h1 className="flex align-midle text-xl font-light text-orange-700">🥦 - VEGE</h1>
-                <aside className="max-w-124 flex md:col-span-2 xl:col-span-1 border border-dashed border-orange-300 rounded-3xl p-6 text-center">
-                    <p className="text-sm uppercase tracking-[0.3em] text-orange-400">
+            <div className="mt-12 md:my-8 md:flex md:justify-between">
+                <h1 className="flex md:align-midle text-xl font-light text-baskbrown mb-8 md:mb-0">🥦 - VEGE</h1>
+                <aside className="max-w-124 flex md:col-span-2 xl:col-span-1 border border-dashed border-baskbrown-light rounded-3xl p-6 text-center">
+                    <p className="text-sm uppercase tracking-[0.3em] text-baskbrown">
                         Chcesz stworzyć swój własny set?
                     </p>
-                    <p className="mt-3 text-base text-green-900">
+                    <p className="mt-3 text-base text-baskgreen">
                         Wybierz swoje pozycje z menu <span className="font-semibold">pintxos</span> lub menu{' '}
                         <span className="font-semibold">tapas</span> i napisz do nas, a my wycenimy Twój zestaw.
                     </p>
@@ -151,10 +153,10 @@ export default function Page() {
             </div>
 
             <div className="flex justify-center">
-                <img
-                    src="logo-small.svg"
+                <Image
+                    src={logosmall}
                     alt="Bask logo"
-                    className="h-24 h-24 md:h-48 object-cover flex"
+                    className="h-40 w-24 md:h-48 object-cover flex"
                 />
             </div>
         </main>

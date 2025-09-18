@@ -8,7 +8,7 @@ const pics = [
 export default function Page() {
     return (
         <main className="max-w-6xl mx-auto px-4 py-12">
-            <h1 className="text-3xl font-bold">Gallery</h1>
+            <h1 className="text-3xl text-baskgreen font-bold">Galeria</h1>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
                 {pics.map((src) => (
                     <img key={src} className="rounded-xl aspect-square object-cover" src={src} alt="Food presentation" />
