@@ -98,14 +98,14 @@ const sets: TapasSet[] = [
 
 export default function Page() {
     return (
-        <main className="max-w-6xl mx-auto px-4 py-16 text-baskbrown">
+        <main className="max-w-6xl mx-auto px-4 py-8 md:py-16 text-baskbrown">
             <header className="text-center">
-                <h1 className="text-5xl sm:text-6xl font-light uppercase text-baskgreen-light">
+                <h1 className="text-5xl sm:text-6xl font-light text-baskgreen-light">
                     bask-sety
                 </h1>
             </header>
 
-            <section className="mt-16 grid gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <section className="mt-8 md:mt-16 grid gap-12 md:grid-cols-2 xl:grid-cols-3">
                 {sets.map((set) => (
                     <article key={set.name} className="space-y-2">
                         <div className="flex items-end justify-between">
@@ -139,8 +139,8 @@ export default function Page() {
                 ))}
             </section>
 
-            <div className="my-8 flex justify-between">
-                <h1 className="flex align-midle text-xl font-light text-baskbrown">🥦 - VEGE</h1>
+            <div className="mt-12 md:my-8 md:flex md:justify-between">
+                <h1 className="flex md:align-midle text-xl font-light text-baskbrown mb-8 md:mb-0">🥦 - VEGE</h1>
                 <aside className="max-w-124 flex md:col-span-2 xl:col-span-1 border border-dashed border-baskbrown-light rounded-3xl p-6 text-center">
                     <p className="text-sm uppercase tracking-[0.3em] text-baskbrown">
                         Chcesz stworzyć swój własny set?
@@ -156,7 +156,7 @@ export default function Page() {
                 <Image
                     src={logosmall}
                     alt="Bask logo"
-                    className="h-24 h-24 md:h-48 object-cover flex"
+                    className="h-40 w-24 md:h-48 object-cover flex"
                 />
             </div>
         </main>

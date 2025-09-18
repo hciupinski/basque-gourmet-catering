@@ -5,11 +5,6 @@ const config = {
         './pages/**/*.{ts,tsx}',
         './public/**/*.html'
     ],
-    safelist: [
-        {
-            pattern: /(bg|text|border)-(baskbrown|baskgreen)-(200|500)/
-        }
-    ],
     theme: {
         extend: {
             colors: {

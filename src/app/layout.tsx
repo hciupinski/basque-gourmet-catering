@@ -4,7 +4,7 @@ import Nav from '@/src/components/Nav';
 import { poppins } from '@/src/utils/fonts';
 import logo from '@/public/logo.svg';
 import foodbg from '@/public/bg.webp';
-import Image from 'next/image'
+import Image from 'next/image';
 
 export const metadata: Metadata = {
     title: 'Basque Gourmet Catering',
@@ -16,30 +16,35 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en">
             <body className={`${poppins.className} min-h-screen bg-white text-gray-900`}>
                 <header className="w-full">
-                    <div id="logo" className="max-w-6xl mx-auto px-4 pt-2 -mb-1">
-                        <a href="/" className="block text-2xl font-extrabold tracking-wide text-green-800">
-                            <Image
-                                src={logo}
-                                alt="Bask logo"
-                                className="h-24 w-36 md:h-48 md:w-72 object-cover"
-                            />
-                        </a>
+                    <div
+                        id="logo"
+                        className="mx-auto px-4 md:px-0 pt-2 md:-mb-1"
+                    >
+                        <div className="flex items-center justify-between md:block">
+                            <a href="/" className="block text-2xl font-extrabold tracking-wide text-green-800">
+                                <Image
+                                    src={logo}
+                                    alt="Bask logo"
+                                    className="h-23 w-32 object-cover md:h-48 md:w-72 md:pl-10 md:-mb-[1px]"
+                                />
+                            </a>
+                            <Nav />
+                        </div>
                     </div>
-                    <Nav />
                 </header>
-                <section className="w-full">
+                <section className="hidden md:block w-full">
                     <div className="max-w-6xl mx-auto px-4 py-6">
                         <div className="overflow-hidden rounded-md shadow">
                             <Image
                                 src={foodbg}
                                 alt="Pintxos and tapas sets"
-                                className="w-full h-64 md:h-80 object-cover"
+                                className="w-full h-48 object-cover md:h-80"
                             />
                         </div>
                     </div>
                 </section>
                 <main className="min-h-[60vh]">{children}</main>
             </body>
-        </html >
+        </html>
     );
 }

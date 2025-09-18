@@ -77,7 +77,7 @@ export default function Page() {
                         <div className="flex items-center gap-2">
                         </div>
                     </div>
-                    <p className="text-xl font-light tracking-[0.4em] text-baskbrown whitespace-nowrap">
+                    <p className="text-sm md:text-xl font-light tracking-[0.4em] text-baskbrown whitespace-nowrap">
                         5/10 małych porcji
                     </p>
                 </li>
@@ -85,14 +85,14 @@ export default function Page() {
                     <li key={item.name} className="flex items-baseline justify-between">
                         <div className="max-w-xl">
                             <div className="flex items-center gap-2">
-                                <h2 className="text-3xl font-semibold uppercase text-baskbrown">{item.name}</h2>
-                                {item.note && <span className="text-2xl" aria-label="option">{item.note}</span>}
+                                <h2 className="text-xl md:text-3xl font-semibold uppercase text-baskbrown">{item.name}</h2>
+                                {item.note && <span className="text-lg md:text-2xl" aria-label="option">{item.note}</span>}
                             </div>
                             <p className="text-sm uppercase text-baskgreen">
                                 {item.description}
                             </p>
                         </div>
-                        <span className="text-3xl font-semibold text-baskbrown whitespace-nowrap">{item.price}</span>
+                        <span className="text-xl md:text-3xl font-semibold text-baskbrown whitespace-nowrap">{item.price}</span>
                     </li>
                 ))}
             </ul>
@@ -105,7 +105,7 @@ export default function Page() {
                 <Image
                     src={logosmall}
                     alt="Bask logo"
-                    className="h-24 h-24 md:h-48 object-cover flex"
+                    className="h-40 w-24 md:h-48 object-cover flex"
                 />
             </div>
         </main>
